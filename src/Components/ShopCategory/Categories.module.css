@@ -1,0 +1,22 @@
+.mainBoxCategories{
+    margin: 60px auto;
+}
+.mainBoxCategory:hover{
+  transform: scale(1.2);
+}
+.innerImageCategories{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+    padding: 17px;
+    border-radius: 12px;
+    color: red;
+    
+}
+.innerTextBox{
+ color: red;
+ font-size: 18px;
+ padding-left: 8px;
+}
+.innerTextBox:hover{
+    font-size: 20px;
+    font-weight: 500;
+}
