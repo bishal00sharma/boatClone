@@ -98,7 +98,7 @@ useEffect(()=>{
             ))}
         </div>
         </div>
-        <Footer />
+       
         </Box>
     )
 
