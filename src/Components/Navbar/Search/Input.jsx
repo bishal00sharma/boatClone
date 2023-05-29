@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import styles from "./Input.module.css"
 
 export default function Input(){
-  const [data, setData] = useState((JSON.parse(localStorage.getItem("email")))||"")
+  const [data, setData] = useState(((localStorage.getItem("email")))||"")
   const naviagte= useNavigate();
 
   function signupPage(){

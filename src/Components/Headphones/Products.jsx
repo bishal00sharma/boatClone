@@ -18,16 +18,16 @@ export default function Products(){
     const toast = useToast()
 
 async function getData(){
-    let dataa=await fetch(`http://localhost:8080/products` , 
-    { headers: { authorization: `bearer ${JSON.parse(localStorage.getItem(`token`))}`} })
+    let dataa=await fetch(`https://zealous-mite-long-underwear.cyclic.app/products` , 
+    { headers: { authorization: `bearer ${(localStorage.getItem(`token`))}`} })
     let res= await dataa.json()
     setData(res)
     change();
 }
 
 async function selectSort(e){
-    let dataa=await fetch(`http://localhost:8080/products/sort/${e.target.value}` , 
-    { headers: { authorization: `bearer ${JSON.parse(localStorage.getItem(`token`))}`} })
+    let dataa=await fetch(`https://zealous-mite-long-underwear.cyclic.app/products/sort/${e.target.value}` , 
+    { headers: { authorization: `bearer ${(localStorage.getItem(`token`))}`} })
     let res= await dataa.json()
     setData(res)
     change();
@@ -36,16 +36,15 @@ async function selectSort(e){
   async function add(data){
 
     if(true){
-        console.log(JSON.parse(localStorage.getItem("user"))._id,data._id)
+        console.log((localStorage.getItem("user"))._id,data._id)
         
         let val =localStorage.getItem("userId")
-        val =val.slice(1); 
-        val =val.slice(0, -1);
+        
         let obj ={ "productId": data._id , "userId" : val }
        
-        await fetch('http://localhost:8080/carts', {
+        await fetch('https://zealous-mite-long-underwear.cyclic.app/carts', {
             method: 'POST',
-            headers : {authorization : `bearer ${JSON.parse(localStorage.getItem(`token`))}`,"Content-type": "application/json;charset=UTF-8" } ,
+            headers : {authorization : `bearer ${(localStorage.getItem(`token`))}`,"Content-type": "application/json;charset=UTF-8" } ,
             body:  JSON.stringify(obj)
            })
            toast({
@@ -76,8 +75,8 @@ useEffect(()=>{
         <div className={styles.mainBoxProductsHeadphones}>
                 
                 {data.map((item)=>(
-              <div className={styles.mainBoxProductsHeadphonesBox}>
-                <div key={item.para}>
+              <div key={item.para} className={styles.mainBoxProductsHeadphonesBox}>
+                <div>
                     <img  src={item.img} alt="product_page" />
                     <div className={styles.mainBoxProductsHeadphonesInsideBox}>
                         <p className={styles.mainBoxProductsHeadphonesTitle}>{item.title}</p>

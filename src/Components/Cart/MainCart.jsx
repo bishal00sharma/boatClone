@@ -15,14 +15,13 @@ export default function MainCart(){
 
     async function getData(){
         let val =localStorage.getItem("userId")
-        val =val.slice(1); 
-        val =val.slice(0, -1);
+       
         let obj ={  "userId" : val }
         
-        let dataa = await fetch(`http://localhost:8080/carts/${val}`, {
+        let dataa = await fetch(`https://zealous-mite-long-underwear.cyclic.app/carts/${val}`, {
             method: 'GET',
             
-             headers : {authorization : `bearer ${JSON.parse(localStorage.getItem(`token`))}`,"Content-type": "application/json;charset=UTF-8" } 
+             headers : {authorization : `bearer ${(localStorage.getItem(`token`))}`,"Content-type": "application/json;charset=UTF-8" } 
            })    
            let res= await dataa.json()
         setCart(res);
@@ -43,10 +42,10 @@ export default function MainCart(){
 
     async function removeItem(data){
         
-        let dataa = await fetch(`http://localhost:8080/carts/${data._id}`, {
+        let dataa = await fetch(`https://zealous-mite-long-underwear.cyclic.app/carts/${data._id}`, {
           method: 'DELETE',
           
-           headers : {authorization : `bearer ${JSON.parse(localStorage.getItem(`token`))}`,"Content-type": "application/json;charset=UTF-8" } 
+           headers : {authorization : `bearer ${(localStorage.getItem(`token`))}`,"Content-type": "application/json;charset=UTF-8" } 
          }).then(res=> getData())   
       
          toast({
@@ -65,9 +64,9 @@ export default function MainCart(){
 
             let obj ={ "quantity": quan}
            
-            await fetch(`http://localhost:8080/carts/${data}`, {
+            await fetch(`https://zealous-mite-long-underwear.cyclic.app/carts/${data}`, {
                 method: 'PATCH',
-                headers : {authorization : `bearer ${JSON.parse(localStorage.getItem(`token`))}`,"Content-type": "application/json;charset=UTF-8" } ,
+                headers : {authorization : `bearer ${(localStorage.getItem(`token`))}`,"Content-type": "application/json;charset=UTF-8" } ,
                 body:  JSON.stringify(obj)
                })
                toast({

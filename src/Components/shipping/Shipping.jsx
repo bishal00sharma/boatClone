@@ -16,15 +16,13 @@ export default function Shipping(){
   
   async function getData(){
     let val =localStorage.getItem("userId")
-    console.log(val)
-    val =val.slice(1); 
-    val =val.slice(0, -1);
+  
     let obj ={  "userId" : val }
     
-    let dataa = await fetch(`http://localhost:8080/carts/${val}`, {
+    let dataa = await fetch(`https://zealous-mite-long-underwear.cyclic.app/carts/${val}`, {
         method: 'GET',
         
-         headers : {authorization : `bearer ${JSON.parse(localStorage.getItem(`token`))}`,"Content-type": "application/json;charset=UTF-8" } 
+         headers : {authorization : `bearer ${(localStorage.getItem(`token`))}`,"Content-type": "application/json;charset=UTF-8" } 
        })    
        let res= await dataa.json()
     setCart(res);

@@ -23,7 +23,7 @@ export const Login = () => {
   }
   
   async function handleSign(){
-    let result =await fetch("http://localhost:8080/user/login",{
+    let result =await fetch("https://zealous-mite-long-underwear.cyclic.app/user/login",{
       method: "POST" ,
       body: JSON.stringify( {email, password}),
       headers:{
@@ -44,9 +44,9 @@ export const Login = () => {
     }
     else{
       localStorage.setItem("user", JSON.stringify(data.user))
-      localStorage.setItem("userId", JSON.stringify(data.user._id))
-      localStorage.setItem("email", JSON.stringify(data.user.email))
-      localStorage.setItem("token", JSON.stringify(data.token))
+      localStorage.setItem("userId", data.user._id)
+      localStorage.setItem("email", data.user.email)
+      localStorage.setItem("token", data.token)
       navigate("/")
     }
   }

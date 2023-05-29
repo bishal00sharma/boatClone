@@ -29,7 +29,7 @@ export default function Footer(){
             </div>
 
             <div className={styles.footerOptions}>
-                <b>About Tripoto</b>
+                <b>About Boat</b>
                 <p>How it works</p>
                 <p>FAQ's</p>
                 <p>Privacy Policy</p>
@@ -40,13 +40,13 @@ export default function Footer(){
 
             <div className={styles.footerOptions}>
             <b>Products</b>
-                <p>Tour Packages</p>
-                <p>Travel Guides</p>
-                <p>Trips & Itineraries</p>
-                <p>Weekend Getaways</p>
-                <p>Places to Visit</p>
-                <p>Other Travel Categories</p>
-                <p>Tripoto Forum</p>
+                <p>Wireless Headphones</p>
+                <p>Wireless Speakers</p>
+                <p>Mobile Accessories</p>
+                <p>Smart Watches</p>
+                <p>Home Audio</p>
+                <p>Wired Headphones</p>
+                <p>Boat Forum</p>
             </div>
             
 
@@ -54,15 +54,14 @@ export default function Footer(){
 
 
             <div className={styles.footerOptions}>
-                <b>Important Travel Links</b>
-                <p>Goa Tourism</p>
-                <p>Dubai Tourism</p>
-                <p>Singapore Tourism</p>
-                <p>Kerala Tourism</p>
-                <p>Manali Tourism</p>
-                <p>Bali Tourism</p>
-                <p>Sri Lanka Tourism</p>
-                <p>Honeymoon Destinations In India</p>
+                <b>Help</b>
+                <p>Track Your Order</p>
+                <p>Warranty & Support</p>
+                <p>Return Policy</p>
+                <p>Service Centers</p>
+                <p>Bulk Orders</p>
+                <p>FAQs</p>
+                <p>Why Buy Direct</p>
             </div>
             
 
@@ -73,12 +72,12 @@ export default function Footer(){
 
             <div className={styles.footerOptions}>
                 <b>Partner Programs</b>
-                <p>Buy Travel Leads</p>
+                <p>Investor Relations</p>
                 <p>Partner With Us</p>
                 <p>Earn Credits</p>
-                <p>Get Paid To Travel</p>
+                <p>Warranty Policy</p>
                 <p>Import Blog To Itinerary</p>
-                <p>Tripoto Ai</p>
+                <p>Boat Ai</p>
             
             </div>
             <hr />

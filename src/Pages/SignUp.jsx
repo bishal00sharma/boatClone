@@ -52,7 +52,7 @@ export const SignUp = () => {
     }
    
     else{
-      await fetch("http://localhost:8080/user/signup",{
+      await fetch("https://zealous-mite-long-underwear.cyclic.app/user/signup",{
       method: "POST" ,
       body: JSON.stringify( {email, password}),
       headers:{

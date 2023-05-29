@@ -4,6 +4,7 @@ import Caro1 from '../Caro/Caro1';
 import MainBox from '../Navbar/MainBox';
 import Categories from '../ShopCategory/Categories';
 import styles from "./Home.module.css"
+import Footer from '../Footer/Footer';
 
 const Home = () => {
   return (
@@ -14,7 +15,7 @@ const Home = () => {
          <Box>
           <div className={styles.container}>
         <div className={styles.card}>
-          <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_blue_759e7ad4-18af-4407-9e8a-91c0058b1a74_300x.png?v=1648108782" />
+          <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Storm_Call.jpg?v=1682408982" />
           <div className={styles.cardTitle}>Boat headphone 1</div>
         </div>
         <div className={styles.card}>
@@ -35,6 +36,7 @@ const Home = () => {
         </div>
       </div>
           </Box>
+          <Footer />
     </div>
   )
 }

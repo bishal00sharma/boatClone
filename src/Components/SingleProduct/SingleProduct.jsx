@@ -33,21 +33,21 @@ import Cart from '../Cart/Cart';
  console.log(id)
 
 function getData(){
-    axios.get(`http://localhost:8080/products/${id}`, { headers : {authorization : `bearer ${JSON.parse(localStorage.getItem("token"))}`}}).then((res)=>setData(res.data[0]))
+    axios.get(`https://zealous-mite-long-underwear.cyclic.app/products/${id}`, { headers : {authorization : `bearer ${(localStorage.getItem("token"))}`}}).then((res)=>setData(res.data[0]))
 }
 async function add(data){
 
   if(true){
-      console.log(JSON.parse(localStorage.getItem("user"))._id,data._id)
+      console.log((localStorage.getItem("user"))._id,data._id)
       
       let val =localStorage.getItem("userId")
       val =val.slice(1); 
       val =val.slice(0, -1);
       let obj ={ "productId": data._id , "userId" : val }
      
-      await fetch('http://localhost:8080/carts', {
+      await fetch('https://zealous-mite-long-underwear.cyclic.app/carts', {
           method: 'POST',
-          headers : {authorization : `bearer ${JSON.parse(localStorage.getItem(`token`))}`,"Content-type": "application/json;charset=UTF-8" } ,
+          headers : {authorization : `bearer ${(localStorage.getItem(`token`))}`,"Content-type": "application/json;charset=UTF-8" } ,
           body:  JSON.stringify(obj)
          })
          toast({

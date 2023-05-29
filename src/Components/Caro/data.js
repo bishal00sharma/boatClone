@@ -8,7 +8,7 @@ export const data =[
         save:"You Save: ₹ 1691 (57%)",
     },
     {
-        img:"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/CMF.996_400x.png?v=1661155833",
+        img:"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/airdopes-121-v2-blue_400x.png?v=1612765376",
         title:"boAt Airdopes 121",
         star:"⭐ 4.0 | 623 reviews",
         cost:5999,
